@@ -1,31 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0024)https://www.mumble2.dev/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peer Chat</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <title>Mumble2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./Mumble2_files/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./Mumble2_files/home.css">
+
 </head>
 <body>
-    <div id="videos">
-        <video class="video-player" id="user-1" autoplay playsinline></video>
-        <video class="video-player" id="user-2" autoplay playsinline></video>
-    </div>
-    <div id="controls">
-        <div class="control-container" id="camera-btn">
-            <img src="/icons/camera.png" alt="camera">
+
+    <header id="nav">
+        <div class="nav--list">
+             <a href="/">
+                 <h3 id="logo">
+                     <img src="./Mumble2_files/logo.png" alt="Site Logo">
+                     <span>Mumble</span>
+                 </h3>
+             </a>
         </div>
-        <div class="control-container" id="mic-btn">
-            <img src="/icons/mic.png" alt="camera">
-        </div>
-        <a href="lobby.html">
-            <div class="control-container" id="leave-btn">
-                <img src="/icons/phone.png" alt="camera">
+ 
+         <div id="navButtons">
+            <div id="nav__links">
+                <a class="nav__link" id="create__room__btn" href="./lobby.html">
+                    Peer Chat
+                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ede0e0" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z"></path></svg>
+                </a>
             </div>
-        </a>
-    </div>
-</body>
-<script src='agora-rtm-sdk-1.4.5.js'></script>
-<script src="main.js"></script>
-</html>
+            <div id="nav__links">
+                <a class="nav__link" id="create__room__btn" href="./StarterTemplate/lobby.html">
+                    Create Room
+                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ede0e0" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z"></path></svg>
+                </a>
+            </div>
+         </div>
+     </header>
+
+    <section class="hero__section">
+        <h2>Interactive Chat &amp; Streaming</h2>
+        <div class="hero__section__img">
+            <img style="max-height: 550px;object-fit: contain;" src="./Mumble2_files/Group42.png">
+        </div>
+    </section>
+
+    <main>
+        <section id="room__list">
+            <h3 id="room__listTitle">Live Now: <span id="rooms__count">1</span></h3>
+            <div class="room__container"><div id="room-8051" class="room__item">
+                        <div class="room__content">
+                            <p class="room__meta">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.118 16.064c2.293-.529 4.428-.993 3.394-2.945-3.146-5.942-.834-9.119 2.488-9.119 3.388 0 5.644 3.299 2.488 9.119-1.065 1.964 1.149 2.427 3.394 2.945 1.986.459 2.118 1.43 2.118 3.111l-.003.825h-15.994c0-2.196-.176-3.407 2.115-3.936zm-10.116 3.936h6.001c-.028-6.542 2.995-3.697 2.995-8.901 0-2.009-1.311-3.099-2.998-3.099-2.492 0-4.226 2.383-1.866 6.839.775 1.464-.825 1.812-2.545 2.209-1.49.344-1.589 1.072-1.589 2.333l.002.619z"></path></svg>
+                                <span>1 Participants</span>
+                            </p>
+                            <h4 class="room__title">Lets test</h4>
+                            <div class="room__box">
+                                <div class="room__author">
+                                    <strong class="message__author">Alireza </strong>
+                                </div>
+                                <a class="room__action" target="_blank" href="./StarterTemplate/lobby.html?room=8051">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+     </main>
+    
+
+<script type="text/javascript" src="./Mumble2_files/AgoraRTC_N-4.11.0.js"></script>
+<script type="text/javascript" src="./Mumble2_files/agora-rtm-sdk-1.4.4.js"></script>
+<script src="./Mumble2_files/home.js"></script>
+</body></html>

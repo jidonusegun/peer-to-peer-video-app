@@ -14,8 +14,8 @@
                 <p>Create OR join room</p>
             </div>
             <div id="form_content_wrapper">
-                <form action="" id="join-form">
-                    <input type="text" name="invite_link" required />
+                <form action="./peerchat.html" id="join-form">
+                    <input type="text" name="invite_link" required placeholder="Enter your roomID or name" />
                     <input type="submit" value="Join Room" />
                 </form>
             </div>
@@ -28,7 +28,7 @@
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         let inviteCode = e.target.invite_link.value
-        window.location = `index.html?room=${inviteCode}`
+        window.location = `./peerchat.html?room=${inviteCode}`
     })
 </script>
 </html>
