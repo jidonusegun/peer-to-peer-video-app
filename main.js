@@ -35,6 +35,7 @@ const constraints = {
     audio: true
 }
 
+
 const init = async() => {
     client = await AgoraRTM.createInstance(APP_ID)
     await client.login({uid})
@@ -51,6 +52,9 @@ const init = async() => {
 
     localStream = await navigator.mediaDevices.getUserMedia(constraints)
     document.getElementById('user-1').srcObject = localStream
+    document.getElementById('user-1').muted = true
+    document.getElementById('user-1').play()
+
 }
 
 const handleMemberLeft = (MemberId) => {
